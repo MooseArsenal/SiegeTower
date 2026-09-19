@@ -19,6 +19,8 @@ The planning **engine is a dependency-free Python package** with no network or
 subprocess access, so the planning logic *cannot act on a target* — that safety
 posture is structural, not just a promise.
 
+![The Siege Tower launch screen: plan a new engagement or review past ones, with the ATT&CK and playbook versions and a "0 commands it can run" counter front and centre](docs/screenshots/launch.png)
+
 ---
 
 ## Quickstart
@@ -59,18 +61,34 @@ it never leaves your machine and holds only what you type.
   gated behind a "client authorized data retention" switch.
 - **Scope** — enter the ROE as tiles: objective, box type, in-scope platforms,
   restrictions, time budget, adversary to emulate.
+
+  ![Scope the engagement: name, client and authorization reference, then pick the objective from tiles like Domain Admin, Data Exfiltration or Ransomware Simulation](docs/screenshots/scope.png)
+
 - **Plan** — 3–5 ranked, ATT&CK-mapped approaches, scored on fit to your ROE
   (time, stealth, reliability), each explaining *why* it was offered.
+
+  ![Choose a plan: ranked approaches with a fit score and time, stealth and difficulty bars, each mapped to ATT&CK tactics and openable in the builder](docs/screenshots/plan.png)
+
 - **Build** — drag pieces from the technique library into your own ordered plan;
   reorder, trim, or extend it to any length.
+
+  ![Build the attack plan: the ATT&CK technique library on the left, the ordered line of march on the right with actions, suggested tools, prerequisites and fallbacks per step](docs/screenshots/build.png)
+
 - **Execute** — walk the plan step by step and document each move: outcome,
   operator, timestamps, notes, evidence references, and targets touched, with a
   live progress bar. When a step is marked **failed or blocked**, Siege Tower
   surfaces ranked **follow-up techniques** — curated fallbacks plus functional
   alternatives that reach the same capability and keep a path to the objective
   open — each addable to the plan in one click.
-- **Field report** — compiled from the ROE, the plan, and the log, as JSON or
-  Markdown.
+
+  ![Execute: the current step with its objective, actions and tools, a step list with status, a live progress bar, and a form to document each move](docs/screenshots/execute.png)
+
+- **Field report** — compiled from the ROE, the plan, and the log: an ATT&CK
+  attack-path graph and coverage heatmap, the overview and Rules of Engagement,
+  the annotated log and findings — exportable as JSON, Markdown, branded DOCX or
+  PDF, or a MITRE ATT&CK Navigator layer, and shareable as a read-only client link.
+
+  ![Field report: the attack-path graph and ATT&CK coverage heatmap over the engagement overview, with Markdown, DOCX, PDF, ATT&CK layer and share-link exports](docs/screenshots/report.png)
 
 ## Project structure
 
